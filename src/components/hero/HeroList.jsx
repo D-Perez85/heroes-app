@@ -1,5 +1,6 @@
 import React from "react";
 import { getHeroesByPublisher } from "../../helpers/getHeroesByPublisher";
+import HeroCard from "./HeroCard";
 
 const HeroList = ({ publisher }) => {
   const heroes = getHeroesByPublisher(publisher);
@@ -8,7 +9,7 @@ const HeroList = ({ publisher }) => {
     <div className="row row-cols-1 row-cols-md-3 g-3 animate__animated animate__fadeInUp">      
       <ul>
         {heroes.map((value) => {
-          return <li key={value.id}>{value.superhero}</li>;
+          return <HeroCard key={value.id} {...value}/>
         })}
       </ul>
     </div>
