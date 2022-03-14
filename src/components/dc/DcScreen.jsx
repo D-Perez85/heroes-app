@@ -3,7 +3,7 @@ import React from 'react'
 const Dc = () => {
   return (
     <div>
-        <h1>DC SCREEN</h1>
+        <h1>DC</h1>
     </div>
   )
 }

@@ -7,19 +7,21 @@ export const Navbar = () => {
       <Link className="navbar-brand" to="/"></Link>
       <div className="navbar-collapse">
         <div className="navbar-nav">
-          <NavLink activeClassName="active"  className="nav-item nav-link" exact to="/marvel">
-            Marvel
+          <NavLink activeClassName="active" className="nav-item nav-link" exact to="/marvel">
+            MARVEL
           </NavLink>
           <NavLink activeClassName="active" className="nav-item nav-link" exact to="/dc">
             DC
           </NavLink>
+          <NavLink className="nav-item nav-link" to="/search">
+            SEARCH
+          </NavLink>
         </div>
       </div>
-      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
         <ul className="navbar-nav ml-auto">
-          <NavLink activeClassName="active" className="nav-item nav-link" exact to="/login">
-            Logout
-          </NavLink>
+          {/* <span className="nav-item nav-link text-info">Damian</span> */}
+          <button className="nav-item nav-link btn">Logout</button>
         </ul>
       </div>
     </nav>
