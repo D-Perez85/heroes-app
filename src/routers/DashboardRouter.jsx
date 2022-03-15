@@ -12,7 +12,6 @@ const DashboardRouter = () => {
       <>
       <Navbar/>
     <div className='container'>
-
     <Routes>
         <Route path='marvel' element={<Marvel/>}/>
         <Route path='dc' element={<Dc/>}/>
