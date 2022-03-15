@@ -33,15 +33,15 @@ const Search = () => {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Buscar un heroe"
+              placeholder="Ingrese su busqueda"
               className="form-control"
               name="searchText"
               value={searchText}
               onChange={handleChange}
               autoComplete="off"
             />
-            <button type="submit" className="btn btn-outline-primary mt-1">
-              SUBMIT
+            <button type="submit" className="btn btn-outline-primary mt-3">
+              BUSCAR
             </button>
           </form>
         </div>
