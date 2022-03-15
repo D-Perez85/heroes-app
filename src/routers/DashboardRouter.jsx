@@ -6,7 +6,6 @@ import Hero from '../components/hero/HeroScreen'
 import Search from '../components/search/SearchScreen'
 import { Navbar } from '../components/ui/NavBar'
 
-
 const DashboardRouter = () => {
   return (
       <>
@@ -15,7 +14,7 @@ const DashboardRouter = () => {
     <Routes>
         <Route path='marvel' element={<Marvel/>}/>
         <Route path='dc' element={<Dc/>}/>
-        <Route path='hero' element={<Hero/>}/>
+        <Route path='hero/:heroId' element={<Hero/>}/>
         <Route path="search" element={<Search />} />
         <Route path="/" element={<Marvel />} />
     </Routes>
@@ -23,5 +22,4 @@ const DashboardRouter = () => {
       </>
     )
 }
-
 export default DashboardRouter; 
