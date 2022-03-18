@@ -12,14 +12,14 @@ const Search = () => {
   
   const {q = ''} = queryString.parse(location.search);
 
-  const[formValues, handleChange] = useForm({
+  const[values, handleChange] = useForm({
     searchText: q,
   }); 
 
-  const {searchText} = formValues; 
+  const {searchText} = values; 
   const heroFiltered = useMemo (() => getHeroesByName(q), [q]); 
 
-  const handleSubmit = (e) =>{
+  const handleSearch = (e) =>{
      e.preventDefault(); 
      navigate(`?q=${searchText}`);
   }
@@ -30,7 +30,7 @@ const Search = () => {
       <hr />
       <div className="row">
         <div className="col-5">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSearch}>
             <input
               type="text"
               placeholder="Ingrese su busqueda"
