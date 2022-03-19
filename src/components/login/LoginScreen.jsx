@@ -12,8 +12,10 @@ const Login = () => {
       type: types.login,
       payload: {name: 'Damian'}
     }; 
+
     dispatch(action)
-    navigate('/marvel', {
+    const lastPath = localStorage.getItem('lastPath') || 'marvel'; 
+    navigate(lastPath, {
       replace: true
     });
   }
